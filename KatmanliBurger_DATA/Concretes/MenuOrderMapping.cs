@@ -1,15 +1,10 @@
 ﻿using KatmanliBurger_DATA.Abstracts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KatmanliBurger_DATA.Concretes
 {
     public class MenuOrderMapping : BaseEntity
     {
-        
+      
         public int MenuId { get; set; }
         public int OrderId { get; set; }
 

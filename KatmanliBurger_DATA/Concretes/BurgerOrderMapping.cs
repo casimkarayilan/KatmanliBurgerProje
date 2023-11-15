@@ -1,13 +1,8 @@
 ﻿using KatmanliBurger_DATA.Abstracts;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KatmanliBurger_DATA.Concretes
 {
-    public class BurgerOrderMapping : BaseEntity
+    public class BurgerOrderMapping:BaseEntity
     {
        
         public int BurgerId { get; set; }
