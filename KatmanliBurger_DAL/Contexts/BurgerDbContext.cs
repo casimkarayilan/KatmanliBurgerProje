@@ -26,7 +26,7 @@ namespace KatmanliBurger_DAL.Contexts
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=DESKTOP-N660G9R\\SQLEXPRESS;Initial Catalog=KatmanliBurgerProje;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
+            optionsBuilder.UseSqlServer("Data Source=DESKTOP-N660G9R\\SQLEXPRESS;Initial Catalog=KatmanliBurgerProje5000;Integrated Security=True;Connect Timeout=30;Encrypt=False;Trust Server Certificate=False;Application Intent=ReadWrite;Multi Subnet Failover=False");
             
         }
     }
