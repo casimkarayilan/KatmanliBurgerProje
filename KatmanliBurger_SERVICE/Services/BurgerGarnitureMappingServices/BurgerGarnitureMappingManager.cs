@@ -16,7 +16,6 @@ namespace KatmanliBurger_SERVICE.Services.BurgerGarnitureMappingServices
 		public void Create(IEnumerable<BurgerGarnitureMapping> entities)
 		{
 			_burgerGarnitureMappingDal.Create(entities);
-			
 		}
 
 		public void Delete(IEnumerable<BurgerGarnitureMapping> entities)
@@ -34,12 +33,18 @@ namespace KatmanliBurger_SERVICE.Services.BurgerGarnitureMappingServices
 			return _burgerGarnitureMappingDal.GetByBurgerId(id);
 		}
 
+		public IEnumerable<BurgerGarnitureMapping> GetByBurgerIds(List<int> burgerIds)
+		{
+			return _burgerGarnitureMappingDal.GetByBurgerIds(burgerIds);
+		}
+
 		public void Update(IEnumerable<BurgerGarnitureMapping> entities)
 		{
 			foreach (var entity in entities)
 			{
 				entity.UpdatedDate = DateTime.Now;
 			}
+
 			_burgerGarnitureMappingDal.Update(entities);
 		}
 	}

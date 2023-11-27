@@ -1,7 +1,6 @@
 ﻿using KatmanliBurger_DAL.Abstracts;
 using KatmanliBurger_DAL.Contexts;
 using KatmanliBurger_DATA.Concretes;
-using Microsoft.EntityFrameworkCore;
 
 namespace KatmanliBurger_DAL.Concretes.EntityFramework
 {
@@ -33,7 +32,15 @@ namespace KatmanliBurger_DAL.Concretes.EntityFramework
             }
         }
 
-        public void Update(IEnumerable<BurgerGarnitureMapping> entities)
+		public IEnumerable<BurgerGarnitureMapping> GetByBurgerIds(List<int> burgerIds)
+		{
+			using (BurgerDbContext context = new BurgerDbContext())
+			{
+				return context.BurgerGarnitures.Where(x => burgerIds.Contains(x.BurgerId)).ToList();
+			}
+		}
+
+		public void Update(IEnumerable<BurgerGarnitureMapping> entities)
         {
             using (BurgerDbContext context = new BurgerDbContext())
             {
